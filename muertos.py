@@ -97,7 +97,7 @@ class Dot:
         pygame.draw.circle(surface, self.color, (int(self.x), int(self.y)), self.size)
 
 # Crear elementos de UI
-# Botones de configuración (más pequeños)
+# Botones de configuración
 pop_plus_btn = Button(WIDTH//2 - 120, 120, 50, 40, "+10")
 pop_minus_btn = Button(WIDTH//2 + 70, 120, 50, 40, "-10")
 birth_plus_btn = Button(WIDTH//2 - 120, 190, 50, 40, "+1")
@@ -108,7 +108,7 @@ k_plus_btn = Button(WIDTH//2 - 120, 330, 50, 40, "+500")
 k_minus_btn = Button(WIDTH//2 + 70, 330, 50, 40, "-500")
 start_btn = Button(WIDTH//2 - 100, 400, 200, 50, "Iniciar Simulación", BUTTON_HOVER)
 
-# Botones de eventos - MEJORADA LA POSICIÓN
+# Botones de eventos 
 disease_btns = [
     Button(50, 420, 150, 40, "Ébola"),
     Button(220, 420, 150, 40, "Gripe"),
@@ -121,7 +121,7 @@ disaster_btns = [
     Button(390, 480, 150, 40, " Terremoto")
 ]
 
-# Botones de ayuda - POSICIÓN CORREGIDA
+# Botones de ayuda 
 help_btns = [
     Button(550, 420, 150, 40, " Cura"),
     Button(550, 480, 150, 40, " Clonación"),
@@ -379,7 +379,7 @@ while running:
     if simulation_active and not paused:
         simulation_time += delta_time
         
-        # Avanzar más rápido (cada 0.2 segundos un año)
+        # Avanzar más rápido segundos cada año
         if simulation_time >= 0.2:
             simulation_time = 0
             year += 1
@@ -495,7 +495,7 @@ while running:
         screen.blit(math_text2, (WIDTH//2 - math_text2.get_width()//2, 525))
         
         # Créditos
-        credits = font_credits.render("Hecho por :) para Calculo1 - Modelos de Crecimiento Poblacional", True, (150, 150, 170))
+        credits = font_credits.render("Hecho por :)Richar para Calculo1 - Modelos de Crecimiento Poblacional", True, (150, 150, 170))
         screen.blit(credits, (WIDTH//2 - credits.get_width()//2, HEIGHT - 30))
     
     else:
@@ -540,7 +540,7 @@ while running:
             btn.rect.y = 190
             btn.draw(screen)
         
-        # Sección de ayudas - POSICIÓN CORREGIDA
+        # Sección de ayudas
         help_title = font_small.render("Ayudas:", True, TEXT_COLOR)
         screen.blit(help_title, (550, 140))
         
